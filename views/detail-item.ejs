@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Item</title>
+  </head>
+  <body>
+    <h1>Item <%= item.name %> Detail</h1>
+    <%# console.log(item.ItemDetail) %> <%# JSON.stringify(item) %>
+    <img src="<%= item.ItemDetail.image %>" alt="img-item" width="200" />
+    <p><b>Name</b> : <%= item.name%></p>
+    <p><b>Color</b> : <%= item.ItemDetail.color %></p>
+    <p><b>Size</b> : <%= item.ItemDetail.size %></p>
+    <p><b>Weight</b> : <%= item.ItemDetail.weight %></p>
+    <p><b>Stock</b> : <%= item.stock %></p>
+    <p><b>Price</b> : <%= rupiah(item.price) %></p>
+
+    <br />
+  </body>
+</html>

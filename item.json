@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Onions Granulated",
+    "stock": 33,
+    "price": 95168
+  },
+  {
+    "name": "Lotus Leaves",
+    "stock": 38,
+    "price": 48892
+  },
+  {
+    "name": "Mushroom - Porcini Frozen",
+    "stock": 14,
+    "price": 84379
+  },
+  {
+    "name": "Wine - Rioja Campo Viejo",
+    "stock": 33,
+    "price": 70588
+  },
+  {
+    "name": "Chinese Foods - Chicken Wing",
+    "stock": 87,
+    "price": 87127
+  }
+]

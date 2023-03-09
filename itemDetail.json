@@ -1,0 +1,37 @@
+[
+  {
+    "colour": "Bread Ww Cluster",
+    "size": 58,
+    "weight": 221,
+    "ItemId": 1,
+    "image": "http://dummyimage.com/137x100.png/ff4444/ffffff"
+  },
+  {
+    "colour": "Langers - Ruby Red Grapfruit",
+    "size": 9,
+    "weight": 857,
+    "ItemId": 2,
+    "image": "http://dummyimage.com/111x100.png/5fa2dd/ffffff"
+  },
+  {
+    "colour": "Wiberg Cure",
+    "size": 20,
+    "weight": 252,
+    "ItemId": 3,
+    "image": "http://dummyimage.com/145x100.png/ff4444/ffffff"
+  },
+  {
+    "colour": "Butter - Pod",
+    "size": 4,
+    "weight": 219,
+    "ItemId": 4,
+    "image": "http://dummyimage.com/235x100.png/5fa2dd/ffffff"
+  },
+  {
+    "colour": "Doilies - 12, Paper",
+    "size": 88,
+    "weight": 580,
+    "ItemId": 5,
+    "image": "http://dummyimage.com/236x100.png/cc0000/ffffff"
+  }
+]

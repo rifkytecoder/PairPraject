@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokopaedi Login</title>
+</head>
+<body style="text-align:center;">
+    
+
+    <h1>Login to Tokopaedi</h1>
+    
+    <form style="text-align:left; margin-left:500px;" method="post" action="/login">
+        <% if (error) { %>
+            <p style="color:red"><%= error %></p>
+        <% } %>
+        <label for="email">Email: </label>
+        <input type="email" name="email" placeholder="abc@mail.com" /><br><br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" /><br><br>
+        
+        <input type="submit" value="Sign in">
+        <button><a href="/register">Register</a></button>
+    </form>
+</body>
+</html>

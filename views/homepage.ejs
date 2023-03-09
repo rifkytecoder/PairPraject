@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+  <% JSON.stringify(email) %>
+  <% if (email) { %>
+   
+    <a href="/profile/<%= email %>">Profil</a>
+    <a href="/logout">Logout</a>
+  <% }else { %>
+    <a href="/login">Login</a> |
+    <a href="/register">Register</a>
+  <% } %>
+
+
+</a>
+<h2>List Item Tokopakedi</h2>
+
+<!-- Search -->
+<form action="" method="get">
+  <input type="text" name="search" placeholder="search by name...">
+  <input type="submit" value="Search">
+</form><br>
+
+<table>
+  <tr>
+    <th>No.</th>
+    <th>Item name</th>
+    <th>Price</th>
+    <th>Stock</th>
+    <th>Action</th>
+  </tr>
+  <% JSON.stringify(items) %>
+  <% items.forEach((el, i) => { %>
+    <tr>
+        <td><%= i+ 1 %></td>
+        <td><%= el.name %></td>
+        <td><%= el.formatRupiah %></td>
+        <td><%= el.stock %></td>
+        <td>
+          <a href="/item/<%= el.id %>">View Details</a>
+          <% if (email) { %>
+           
+            <a href="/buy/<%= el.id %>">Buy</a>
+          <% } %>
+        </td>
+    </tr>
+  <% }) %>
+</table>
+
+</body>
+</html>
+
