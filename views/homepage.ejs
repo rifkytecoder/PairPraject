@@ -20,7 +20,8 @@ tr:nth-child(even) {
 </style>
 </head>
 <body>
-  <% JSON.stringify(email) %>
+  
+  <% JSON.stringify(email,twitterLink) %>
   <% if (email) { %>
    
     <a href="/profile/<%= email %>">Profil</a>
@@ -30,9 +31,10 @@ tr:nth-child(even) {
     <a href="/register">Register</a>
   <% } %>
 
+    <a href="<%= twitterLink %>"> 🐦 </a>
 
 </a>
-<h2>List Item Tokopakedi</h2>
+<h2>List Item Tokopaedi</h2>
 
 <!-- Search -->
 <form action="" method="get">
@@ -57,9 +59,13 @@ tr:nth-child(even) {
         <td><%= el.stock %></td>
         <td>
           <a href="/item/<%= el.id %>">View Details</a>
+          
+         
           <% if (email) { %>
            
             <a href="/buy/<%= el.id %>">Buy</a>
+
+            
           <% } %>
         </td>
     </tr>

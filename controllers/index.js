@@ -9,6 +9,7 @@ const bcrypt = require('bcryptjs');
 const { Op } = require('sequelize');
 const session = require('express-session');
 const rupiah = require('../helpers/formatter');
+const socialMediaLinks = require('social-media-links');
 
 class Controller {
   // show form register
@@ -62,8 +63,16 @@ class Controller {
 
   // home
   static tokopaedi(req, res) {
-    const { search } = req.query;
+    let socialData = {
+      account: 'twitter',
+      url: 'https://tokopakedi.com',
+      title: 'Yuk belanja di ',
+      via: 'tokopaedi',
+      hashtags: ['TokopaediHemat', 'TokopaediPromo'],
+    };
 
+    let twitterLink = socialMediaLinks.create(socialData);
+    const { search } = req.query;
     const email = req.session.email;
     const options = {};
 
@@ -73,7 +82,7 @@ class Controller {
 
     Item.findAll(options)
       .then((items) => {
-        res.render('homepage', { items, email });
+        res.render('homepage', { items, email, twitterLink });
       })
       .catch((err) => res.send(err));
   }
